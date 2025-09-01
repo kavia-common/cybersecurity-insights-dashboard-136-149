@@ -39,10 +39,11 @@ app.add_middleware(
 # ----------------------------------------------------------------------------
 
 FAKE_USERS_DB = {
+    # Password is 'password' -> 'fakehashedpassword'
     "admin@example.com": {
         "id": "user1",
         "email": "admin@example.com",
-        "hashed_password": "fakehashedpassword",
+        "hashed_password": "fakehashedpassword",  # should be fakehashed + password
         "full_name": "Admin User",
         "is_active": True,
     }
